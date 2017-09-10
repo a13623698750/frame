@@ -30,6 +30,7 @@ class Base{
              $this->connect();
         }
        $into = explode('\\',$class);
+//         获取数据库的表名  strtolower 转化成小写
         $this->table = strtolower($into[2]);
     }
     private function connect(){
@@ -70,10 +71,12 @@ class Base{
 
 //    排序
     public function order($var = ""){
-
+//        判断是否存在字段
         if(empty($this->field)){
+//            存在返回false
             return false;
         }
+//           存储字符串
         $sql = "select * from {$this->table} order by {$this->field} {$var} ";
         return $this->query($sql);
     }
@@ -82,12 +85,11 @@ class Base{
 //       执行数据写入
 //        $data    要写入的数据
     public function insert($data){
-//        存储名
+//      存储数据
         $fields = '';
-//        存储值
         $values = '';
         foreach ($data as $k =>$v){
-
+//            判断数字是否是整数
             if(is_int($v)){
                 $fields .=$k .',';
                 $values .=$v . ",";
