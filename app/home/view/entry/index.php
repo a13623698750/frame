@@ -9,15 +9,12 @@
     <link rel="stylesheet" href="./static/bs3/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
+<div class="container"  style="text-align: center;margin-top: 200px">
     <h1>Congratuations!</h1>
     <p>You have successfully created your frame application</p>
     <p>
         <a href="http://www.wubin.pro" class="btn btn-primary btn-lg">About Me</a>
     </p>
 </div>
-</div>
-<hr>
-<?php echo $test; ?>
 </body>
 </html>

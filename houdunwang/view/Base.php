@@ -12,6 +12,7 @@
 //     用于存放模板路径
      protected $file;
 //      用于接受存储数据
+//     分配变量
      public  function with($var){
          //dd($var);
          $this->data = $var;
@@ -22,8 +23,9 @@
          //dd(MODULE);//home
          //dd(CONTROLLER);//entry
          //dd(ACTION);//index
-         $this ->file = "../app/".MODULE."/view/".strtolower(CONTROLLER)."/".ACTION.".".c('view.suffix');
-            return $this;
+        // $this ->file = "../app/".MODULE."/view/".strtolower(CONTROLLER)."/".ACTION.".".c('view.suffix');
+         $this->file =  "../app/".MODULE."/view/".strtolower (CONTROLLER)."/".ACTION.".php" ;
+         return $this;
      }
 
 //      用echo  输出一个对象的时候触发

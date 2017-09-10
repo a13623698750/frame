@@ -16,7 +16,7 @@ class Boot{
 //使用静态方法 不用实例化；直接用类名调用 效率高
     public static function run()
     {
-        self::handelr();
+//        self::handelr();
 //        检测是否可以正常输出
         //echo 1;
 //        初始化框架
